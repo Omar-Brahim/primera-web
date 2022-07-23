@@ -1,0 +1,256 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url(../assets/galaxy.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: yellow;
+}
+
+/*HEADER*/
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: flex-start;
+    margin: 15px 0 0 150px;
+}
+
+/*NAVEGACION*/
+.nav {
+    display: inline;
+    align-items: center;
+    list-style-type: none;
+    margin: 3px;
+    padding: 5px;
+    background-color: rgb(39, 38, 38);
+    border-radius: 20px;
+}
+
+.nav:hover {
+    background: yellow;
+
+}
+
+.elemento:hover {
+    color: black;
+}
+
+.elemento {
+    color: yellow;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/*LOGO Y BUSCADOR*/
+
+header nav img {
+    margin: 0 0 30px 0;
+}
+
+.buscador {
+    align-self: flex-start;
+    margin: 10px;
+}
+
+/* MAIN INDEX*/
+
+.index-one {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    margin: 0 40px;
+
+}
+
+/* MAIN - ONE*/
+
+main img {
+    margin: 30px 0;
+}
+
+.main-one {
+    display: flex;
+}
+
+main section article h1 {
+    margin: 20px 15px 0 20px;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 1.6;
+
+}
+
+main section figure {
+
+    align-self: center;
+    margin: 0 0 0 20px;
+}
+
+
+main section figure img {
+    width: 110px;
+
+}
+
+main figure a figcaption {
+    color: white;
+    text-decoration: none;
+}
+
+/* MAIN - TWO*/
+
+.titulo-two {
+    margin: 30px 0;
+}
+
+.main-two {
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+}
+
+.main-two p {
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+iframe {
+    align-self: center;
+    margin-bottom: 20px;
+    width: 560px;
+    height: 315px; 
+
+}
+
+
+
+/*ASIDE INDEX */
+
+
+.card-conteiner {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    margin: 0 60px;
+}
+
+.card-conteiner h2 {
+    margin: 0 0 20px 0;
+
+
+}
+
+.card img {
+    width: 200px;
+    border-radius: 10px;
+
+}
+
+.gallery {
+    height: 60vmin;
+    display: flex;
+    gap: 5px;
+}
+
+.gallery .card {
+    flex: 2;
+    object-fit: cover;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s;
+
+}
+
+.gallery .card:hover {
+    flex: 4;
+}
+
+
+/*FOOTER INDEX */
+
+.pie {
+    grid-area: footer;
+    display: flex;
+    margin: 60px;
+    font-size: 20px;
+    text-align: justify;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*MEDIA QUERIES*/
+@media screen and (max-width:1075px) {
+
+
+    .logo {
+        width: 400px;
+    }
+
+    .gallery {
+        height: 70vmin;
+    }
+
+    .gallery .card {
+        flex: 1.5;
+    }
+
+}
+
+@media screen and (max-width:880px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 200px;
+    }
+
+    .logo {
+        width: 500px;
+    }
+
+    .buscador {
+        margin-left: 150px;
+    }
+
+    .gallery {
+        height: 80vmin;
+    }
+
+    .gallery .card {
+        flex: 1;
+    }
+}
+
+@media screen and (max-width:605px) {
+  
+    .logo{
+        width: 400px;
+    }
+    .nav{
+        display: block;
+    }
+.buscador{
+    display: none;
+}
+.card-conteiner {
+    display: none;
+}
+main figure{
+    display: none;
+}
+iframe{
+    width: 360px;
+    height: 200px; 
+}
+
+
+}
